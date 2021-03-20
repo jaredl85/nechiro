@@ -4,12 +4,14 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+<!-- build:css css/main.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Raleway:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
+<!-- endbuild -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Raleway:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    
 
     <title>North Seattle Chiropractic</title>
 </head>
@@ -19,7 +21,7 @@
     <header>    
         <div class="jumbotron" id="home">
             <div class="overlay">
-                <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+                <nav class="navbar navbar-expand-sm navbar-dark">
                     <div>
                         <a class="navbar-brand" href="#">
                             <img src="resources/img/logo.png" height="40"/>
@@ -33,18 +35,20 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse justify-content-end" id="mainnavbar">
-                            <ul class="navbar-nav ml-auto justify-content-end">
+                           <!--- <ul class="navbar-nav ml-auto login-button-box justify-content-end">
                                 <li class="navbar-text">
                                     <a role="button" data-toggle="modal" data-target="#loginModal">
                                         <i class="fa fa-sign-in"></i> Login
                                 </li>
                             </ul>
+                        -->
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#whatwedo">Services</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#aboutus">About</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#documents">Forms</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#forms">Forms</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                                <li class="nav-item"><a class="nav-link" role="button" data-toggle="modal" data-target="#loginModal">Login</a></li>
                             </ul>
                         </div>
                     </div>
@@ -89,20 +93,22 @@
 
                 <h1 class="text-center">Quality Chiropractic care</h1>
                 <div class="hero-buttons align-items-center text-center">
-                    <a href="#" class="btn btn-lg btn-outline-info text-white">Learn More</a>
-                    <a href="#" class="btn btn-lg btn-info">Contact Us</a>
+                    <a href="#services" class="btn btn-lg btn-outline-info text-white">Learn More</a>
+                    <a href="#contact" class="btn btn-lg btn-info">Contact Us</a>
                 </div>
             </div>
         </div>
     </header>
 
+<div class="nav-stop" id="services"></div>
+
     <!--BEGIN 'WHAT WE DO' SECTION-->
-<div class="container" id="whoweare">
-    <h2>Who We Are</h2>
+<div class="container js--whatwedo" id="whoweare">
+    <h2 class="after-hero">Who We Are</h2>
     <div class="row row-content">
-        <div class="col-8 mx-auto">
-            <p class="text-justify">Seattle Northeast Chiropractic is a professional chiropractic office located in Seattle, WA. We specialize in physical rehabilitation services for people recovering from significant injury. Whether you were injured in a motor vehicle accident, on the job injury, or day-to-day activities, Dr. Lee is trained in several treatment techniques to help you get back to feeling good again.</p>
-            <p class="text-justify">At Seattle Northeast Chiropractic, we offer traditional chiropractic manipulation accompanied by a diverse range of treatment techniques. Dr. Lee is also trained and certified in Trigenics® Therapy, Graston® Technique, Non-Surgical Decompression and Class IV Laser Treatment.</p>
+        <div class="col mx-auto">
+            <p>Seattle Northeast Chiropractic is a professional chiropractic office located in Seattle, WA. We specialize in physical rehabilitation services for people recovering from significant injury. Whether you were injured in a motor vehicle accident, on the job injury, or day-to-day activities, Dr. Lee is trained in several treatment techniques to help you get back to feeling good again.</p>
+            <p>At Seattle Northeast Chiropractic, we offer traditional chiropractic manipulation accompanied by a diverse range of treatment techniques. Dr. Lee is also trained and certified in Trigenics® Therapy, Graston® Technique, Non-Surgical Decompression and Class IV Laser Treatment.</p>
         </div>
     </div>
 </div>
@@ -114,7 +120,8 @@
             </div>
             <div class="col-md-6">
                 <h3>Traction Therapy</h3>
-                <img src="resources/img/denneroll-header-logo-retina.png" <p class="text-justify">Denneroll Spinal
+                <img src="resources/img/denneroll-header-logo-retina.png"> 
+                <p class="text-justify">Denneroll Spinal
                 Orthotics provide an effective stretch to your muscles and your spine. Each model is designed to
                 individually target Cervical, Thoracic or Lumbar Spine. Denneroll can aide in treatment of complex
                 spinal conditions such as headaches, neck pain, low back pain, numbness, tingling and Scoliosis. Whether
@@ -268,7 +275,7 @@
             <h2>Getting Started</h2>
         </div>
         <div class="col-md-8 mx-auto">
-            <ul>
+            <ul class="align-items-center">
                 <li class=""><p><i class="fa fa-clipboard"></i>Download the editable pdf version of the <a href="#">insurance form</a> on our website and fill it out.</p></li>
                 <li class="align-items-center"><p><i class="fa fa-wpforms"></i>Fill out the <a href="#">contact form</a> on our website. Upload the insurance document.</p></li>
                 <li class="align-items-center"><p><i class="fa fa-phone"></i><a href="#">Call the office</a> to schedule an appointment.</p></li>
@@ -313,6 +320,7 @@
         </div>
     </div>
 
+    <div class="nav-stop" id="about"></div>
     <!--ABOUT US-->
     <div class="container">
         <div class="row row-content" id="aboutus">
@@ -340,7 +348,7 @@
             </div>
         </div>
     </div>
-    
+    <div class="nav-stop" id="forms"></div>
     <!--DOCUMENTS SECTION-->
 <div id="documents">
     <div class="overlay">
@@ -375,8 +383,9 @@
 </div>
 </div>
 </div>
-    
+<div class="nav-stop" id="contact"></div>
         <!--CONTACT US SECTION-->
+        <div id="contactus">
         <h2 class="contact-heading" id="contact">Contact Us</h2>
         <div class="contact-container clearfix">
             <div id="map">
@@ -391,12 +400,12 @@
                     <li><i class="fa fa-fax"></i><strong> Fax:</strong> 206.440.8453</li>
                     <li><i class="fa fa-envelope"></i><strong> Email:</strong> <a href="mailto: snecfrontdesk@gmail.com">snecfrontdesk@gmail.com</a></li>
                 </ul>
-                <div class="col social-icons">
+                <!--<div class="col social-icons">
                     <a href="http://instagram.com/"> <i class="fa fa-instagram fa-lg"></i></a>
                     <a href="http://facebook.com/"> <i class="fa fa-facebook fa-lg"></i></a>
                     <a href="http://twitter.com/"> <i class="fa fa-twitter fa-lg"></i></a>
                     <a href="http://youtube.com/"> <i class="fa fa-youtube fa-lg"></i></a>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>
@@ -453,7 +462,8 @@
                 </div>
             </div>
         </div>
-        </div>
+    </div>
+    </div>
 
     <!--FOOTER GOES HERE-->
     <footer>
@@ -463,8 +473,8 @@
                     <i class="fa fa-phone fa-lg"></i> Tel: 1-206-123-4567 <br />
                     <i class="fa fa-envelope fa-lg"></i> Email: someone@chiro.co
                 </div>
-                <div class="col-sm-4 social-icons justify-content-end">
-                    <h5>Social</h5>
+                <div class="col-sm-4 social-icons footer-social-icons">
+                    <h5 class="text-right">Social</h5>
                     <a href="http://instagram.com/"> <i class="fa fa-instagram fa-lg"></i></a>
                     <a href="http://facebook.com/"> <i class="fa fa-facebook fa-lg"></i></a>
                     <a href="http://twitter.com/"> <i class="fa fa-twitter fa-lg"></i></a>
@@ -473,10 +483,13 @@
             </div>
     </footer>
 
+<!-- build:js/main.js -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/waypoints/lib/jquery.waypoints.min.js"></script>
     <script src="resources/js/index.js"></script>
+<!-- endbuild -->
 
 </body>
 
